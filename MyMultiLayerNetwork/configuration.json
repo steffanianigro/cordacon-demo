@@ -1,0 +1,155 @@
+{
+  "backprop" : true,
+  "backpropType" : "Standard",
+  "cacheMode" : "NONE",
+  "confs" : [ {
+    "cacheMode" : "NONE",
+    "epochCount" : 0,
+    "iterationCount" : 0,
+    "layer" : {
+      "@class" : "org.deeplearning4j.nn.conf.layers.LSTM",
+      "activationFn" : {
+        "@class" : "org.nd4j.linalg.activations.impl.ActivationTanH"
+      },
+      "biasInit" : 0.0,
+      "biasUpdater" : null,
+      "constraints" : null,
+      "dist" : null,
+      "distRecurrent" : null,
+      "forgetGateBiasInit" : 1.0,
+      "gateActivationFn" : {
+        "@class" : "org.nd4j.linalg.activations.impl.ActivationSigmoid"
+      },
+      "gradientNormalization" : "None",
+      "gradientNormalizationThreshold" : 1.0,
+      "idropout" : null,
+      "iupdater" : {
+        "@class" : "org.nd4j.linalg.learning.config.RmsProp",
+        "epsilon" : 1.0E-8,
+        "learningRate" : 0.001,
+        "rmsDecay" : 0.95
+      },
+      "l1" : 0.0,
+      "l1Bias" : 0.0,
+      "l2" : 0.0,
+      "l2Bias" : 0.0,
+      "layerName" : "layer0",
+      "nin" : 1,
+      "nout" : 50,
+      "pretrain" : false,
+      "weightInit" : "XAVIER",
+      "weightInitRecurrent" : null,
+      "weightNoise" : null
+    },
+    "maxNumLineSearchIterations" : 5,
+    "miniBatch" : false,
+    "minimize" : true,
+    "optimizationAlgo" : "STOCHASTIC_GRADIENT_DESCENT",
+    "pretrain" : false,
+    "seed" : 123,
+    "stepFunction" : null,
+    "variables" : [ "W", "RW", "b" ]
+  }, {
+    "cacheMode" : "NONE",
+    "epochCount" : 0,
+    "iterationCount" : 0,
+    "layer" : {
+      "@class" : "org.deeplearning4j.nn.conf.layers.LSTM",
+      "activationFn" : {
+        "@class" : "org.nd4j.linalg.activations.impl.ActivationTanH"
+      },
+      "biasInit" : 0.0,
+      "biasUpdater" : null,
+      "constraints" : null,
+      "dist" : null,
+      "distRecurrent" : null,
+      "forgetGateBiasInit" : 1.0,
+      "gateActivationFn" : {
+        "@class" : "org.nd4j.linalg.activations.impl.ActivationSigmoid"
+      },
+      "gradientNormalization" : "None",
+      "gradientNormalizationThreshold" : 1.0,
+      "idropout" : null,
+      "iupdater" : {
+        "@class" : "org.nd4j.linalg.learning.config.RmsProp",
+        "epsilon" : 1.0E-8,
+        "learningRate" : 0.001,
+        "rmsDecay" : 0.95
+      },
+      "l1" : 0.0,
+      "l1Bias" : 0.0,
+      "l2" : 0.0,
+      "l2Bias" : 0.0,
+      "layerName" : "layer1",
+      "nin" : 50,
+      "nout" : 50,
+      "pretrain" : false,
+      "weightInit" : "XAVIER",
+      "weightInitRecurrent" : null,
+      "weightNoise" : null
+    },
+    "maxNumLineSearchIterations" : 5,
+    "miniBatch" : false,
+    "minimize" : true,
+    "optimizationAlgo" : "STOCHASTIC_GRADIENT_DESCENT",
+    "pretrain" : false,
+    "seed" : 123,
+    "stepFunction" : null,
+    "variables" : [ "W", "RW", "b" ]
+  }, {
+    "cacheMode" : "NONE",
+    "epochCount" : 0,
+    "iterationCount" : 0,
+    "layer" : {
+      "@class" : "org.deeplearning4j.nn.conf.layers.RnnOutputLayer",
+      "activationFn" : {
+        "@class" : "org.nd4j.linalg.activations.impl.ActivationIdentity"
+      },
+      "biasInit" : 0.0,
+      "biasUpdater" : null,
+      "constraints" : null,
+      "dist" : null,
+      "gradientNormalization" : "None",
+      "gradientNormalizationThreshold" : 1.0,
+      "hasBias" : true,
+      "idropout" : null,
+      "iupdater" : {
+        "@class" : "org.nd4j.linalg.learning.config.RmsProp",
+        "epsilon" : 1.0E-8,
+        "learningRate" : 0.001,
+        "rmsDecay" : 0.95
+      },
+      "l1" : 0.0,
+      "l1Bias" : 0.0,
+      "l2" : 0.0,
+      "l2Bias" : 0.0,
+      "layerName" : "layer2",
+      "lossFn" : {
+        "@class" : "org.nd4j.linalg.lossfunctions.impl.LossMSE",
+        "configProperties" : false,
+        "numOutputs" : -1
+      },
+      "nin" : 50,
+      "nout" : 1,
+      "pretrain" : false,
+      "weightInit" : "XAVIER",
+      "weightNoise" : null
+    },
+    "maxNumLineSearchIterations" : 5,
+    "miniBatch" : false,
+    "minimize" : true,
+    "optimizationAlgo" : "STOCHASTIC_GRADIENT_DESCENT",
+    "pretrain" : false,
+    "seed" : 123,
+    "stepFunction" : null,
+    "variables" : [ "W", "b" ]
+  } ],
+  "epochCount" : 0,
+  "inferenceWorkspaceMode" : "ENABLED",
+  "inputPreProcessors" : { },
+  "iterationCount" : 2001,
+  "pretrain" : false,
+  "tbpttBackLength" : 20,
+  "tbpttFwdLength" : 20,
+  "trainingWorkspaceMode" : "ENABLED"
+}
